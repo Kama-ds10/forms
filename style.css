@@ -68,3 +68,35 @@ body {
   gap: 1.5rem;
 }
 
+
+.shift-form-row {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shift-label {
+  font-size: 1rem;
+  color: #e5e7eb; /* light gray for readability */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.shift-input {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shift-input:focus {
+  border-color: #ff3131; /* SHIFT accent red */
+  box-shadow: 0 0 6px rgba(255, 49, 49, 0.6);
+}
+
