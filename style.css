@@ -100,3 +100,30 @@ body {
   box-shadow: 0 0 6px rgba(255, 49, 49, 0.6);
 }
 
+
+/* responsive layout */
+@media only screen and (min-width: 700px) {
+  .shift-speaker-header,
+  .shift-speaker-form {
+    width: 600px;
+  }
+
+  .shift-form-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .shift-label {
+    width: 130px;
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 20px;
+  }
+
+  .shift-input {
+    width: 100%;
+    max-width: 320px;
+  }
+}
