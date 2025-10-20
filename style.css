@@ -148,6 +148,15 @@ body {
     width: 100%;
     max-width: 320px;
   }
+
+
+  .shift-form-row .shift-input[type='text'],
+  .shift-form-row .shift-input[type='email'],
+  .shift-form-row select,
+  .shift-form-row textarea {
+    width: 320px;
+    height: auto;
+  }
 }
 
 
