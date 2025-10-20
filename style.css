@@ -101,6 +101,28 @@ body {
 }
 
 
+/* email */
+/* Before */
+.shift-form-row .shift-input[type='text'] {
+  background-color: #1a1a1a;
+  /* ... */
+}
+
+/* ✅ After: Combine selectors for text and email inputs */
+.shift-form-row .shift-input[type='text'],
+.shift-form-row .shift-input[type='email'] {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
 /* responsive layout */
 @media only screen and (min-width: 700px) {
   .shift-speaker-header,
@@ -127,3 +149,5 @@ body {
     max-width: 320px;
   }
 }
+
+
