@@ -122,6 +122,14 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.shift-form-row .shift-input[type='text']:invalid,
+.shift-form-row .shift-input[type='email']:invalid {
+  border: 1px solid #ff3131; /* SHIFT accent red */
+  color: #ff3131;
+  box-shadow: none; /* remove browser default red glow */
+}
+
+
 
 /* responsive layout */
 @media only screen and (min-width: 700px) {
