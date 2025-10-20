@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  color: #e5e7eb; /* soft gray text for readability */
+  background-color: #0d0d0d; /* deep black for SHIFT's bold vibe */
+  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
