@@ -130,6 +130,29 @@ body {
 }
 
 
+/* radio selection */
+.shift-radio-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Radio button */
+.shift-radio {
+  margin-right: 10px;
+  accent-color:#7c88f5; /* modern browsers support this */
+  cursor: pointer;
+}
+ 
+
+/* Label */
+.shift-radio-label {
+  font-size: 14px;
+  color: #dbd4d4;
+  cursor: pointer;
+}
+
+
 
 /* responsive layout */
 @media only screen and (min-width: 700px) {
@@ -165,6 +188,27 @@ body {
     width: 320px;
     height: auto;
   }
+
+  /* radio selection */
+  .shift-form-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .shift-legend {
+    width: 150px;
+    text-align: right;
+    padding-right: 20px;
+    margin: 0;
+  }
+
+  /* Group radios side by side */
+  .shift-radio-row {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
 }
 
 
