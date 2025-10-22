@@ -153,6 +153,19 @@ body {
 }
 
 
+/* drop down */
+.shift-form-row select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  --webkit-appearance: none; /* Ensure consistent look on Chrome & Safari */
+  background-color: #fff;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+}
+
+
+
 
 /* responsive layout */
 @media only screen and (min-width: 700px) {
