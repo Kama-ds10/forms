@@ -1,94 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Design</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHIFT Speaker Submission</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="speaker-form-header">
+      <h1>SHIFT Speaker Submission</h1>
+      <p><em>We’re spotlighting voices shaping the SHIFT Culture — from tech innovators to creative leaders. 
+      If you have a message that moves minds, fill this out to join the SHIFT Experience.</em></p>
+    </header>
+
+    <form action="" method="get" class="speaker-form">
+      <div class="form-row">
+        <label for="full-name">Full Name</label>
+        <input id="full-name" name="full-name" type="text" required />
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+      </div>
+
+      <fieldset class="legacy-form-row">
+        <legend>Type of Talk</legend>
+        <input id="talk-type-1" name="talk-type" type="radio" value="main-stage" />
+        <label for="talk-type-1" class="radio-label">Main Stage</label>
+        <input id="talk-type-2" name="talk-type" type="radio" value="workshop" checked />
+        <label for="talk-type-2" class="radio-label">Workshop</label>
+      </fieldset>
+
+      <div class="form-row">
+        <label for="t-shirt">T-Shirt Size</label>
+        <select id="t-shirt" name="t-shirt">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="abstract">Talk Description</label>
+        <textarea id="abstract" name="abstract" placeholder="Describe your talk in 500 words or less"></textarea>
     
-    <!-- header -->
-<header class="shift-speaker-header">
-  <h1 class="shift-title">SHIFT Speaker Submission</h1>
-  <p class="shift-subtext">
-    <em>Got something powerful to share? Join the movement — submit your talk below.</em>
-  </p>
-</header>
+      </div>
 
+      <!-- <div class="form-row">
+        <label class="checkbox-label" for="available">
+          <input id="available" name="available" type="checkbox" value="is-available" />
+          <span>I’m available on the event date</span>
+        </label>
+      </div> -->
 
-<!-- form section -->
- <form action="" method="get" class="shift-speaker-form">
-
-    <!-- full name -->
-<div class="shift-form-row">
-  <label for="full-name" class="shift-label">Full Name</label>
-  <input id="full-name" name="full-name" type="text" class="shift-input" placeholder="Enter your full name" />
-</div>
-
-
-<!-- email -->
- <div class="shift-form-row">
-  <label for="email" class="shift-label">Email Address</label>
-  <input
-    id="email"
-    name="email"
-    type="email"
-    class="shift-input"
-    placeholder="you@example.com"
-    required
-  />
-</div>
-
-<!-- ratio selection -->
-
-<fieldset class="shift-form-group">
-  <legend class="shift-legend">Type of Talk</legend>
-
-  <div class="shift-radio-row">
-    <input
-      id="talk-type-main"
-      name="talk-type"
-      type="radio"
-      value="main-stage"
-      class="shift-radio"
-    />
-    <label for="talk-type-main" class="shift-radio-label">Main Stage</label>
-  </div>
-
-  <div class="shift-radio-row">
-    <input
-      id="talk-type-workshop"
-      name="talk-type"
-      type="radio"
-      value="workshop"
-      class="shift-radio"
-      checked
-    />
-    <label for="talk-type-workshop" class="shift-radio-label">Workshop</label>
-  </div>
-</fieldset>
-
-
-<!-- drop down -->
- <div class="shift-form-row">
-  <label for="speaker-shirt" class="shift-label">Speaker T-Shirt Size</label>
-  <select id="speaker-shirt" name="speaker-shirt" class="shift-select">
-    <option value="" disabled selected>Select your size</option>
-    <option value="xs">Extra Small</option>
-    <option value="s">Small</option>
-    <option value="m">Medium</option>
-    <option value="l">Large</option>
-    <option value="xl">Extra Large</option>
-  </select>
-</div>
-</form>
-
-
-
-
-
-
-    <script src="app.js"></script>
-</body>
+      <div class="form-row">
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
 </html>

@@ -1,227 +1,161 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
-
-
 body {
-  color: #e5e7eb; /* soft gray text for readability */
-  background-color: #0d0d0d; /* deep black for SHIFT's bold vibe */
-  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  color: #EDEDED;
+  background-color: #0C0C0C;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-
+  line-height: 1.4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 2rem;
+  padding-bottom: 100px;
 }
 
-.shift-speaker-header {
+/* Header */
+.speaker-form-header {
   text-align: center;
-  background-color: #1a1a1a; /* dark gray tone for contrast */
-  border: 1px solid #2a2a2a; /* subtle border to define the section */
-  border-radius: 12px; /* smoother corners for modern feel */
-
-  width: 85%;
-  max-width: 800px;
-  margin: 3rem 0;
-  padding: 3rem 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  background-color: #111;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  width: 80%;
+  margin: 50px 0 30px;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
 }
-
-.shift-speaker-header .shift-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+.speaker-form-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #FFD700;
   letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.speaker-form-header p {
+  color: #CFCFCF;
+  font-size: 15px;
 }
 
-.shift-speaker-header .shift-subtext {
-  color: #9ca3af; /* soft gray for secondary text */
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+/* Form */
+.speaker-form {
+  background-color: #1A1A1A;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  width: 80%;
+  padding: 50px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.08);
 }
-
-
-/*form section */
-.shift-speaker-form {
-  background-color: #111111; /* deep background to match header */
-  border: 1px solid #2a2a2a; /* subtle border for structure */
-  border-radius: 12px; /* smoother, more premium corners */
-
-  width: 85%;
-  max-width: 800px;
-  padding: 3rem 2rem;
-  margin: 0 0 3rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-
+.form-row {
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-
-.shift-form-row {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.shift-label {
-  font-size: 1rem;
-  color: #e5e7eb; /* light gray for readability */
-  font-weight: 500;
+/* Labels & Inputs */
+.form-row label {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #FFD700;
   letter-spacing: 0.5px;
 }
-
-.shift-input {
-  background-color: #1a1a1a;
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select,
+.form-row textarea {
+  background-color: #111;
   border: 1px solid #333;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 100%;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  color: #ffffff;
+  padding: 10px;
+  font-size: 15px;
+  color: #EDEDED;
+  transition: all 0.3s ease;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #FFD700;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
 }
 
-.shift-input:focus {
-  border-color: #ff3131; /* SHIFT accent red */
-  box-shadow: 0 0 6px rgba(255, 49, 49, 0.6);
-}
-
-
-/* email */
-/* Before */
-.shift-form-row .shift-input[type='text'] {
-  background-color: #1a1a1a;
-  /* ... */
-}
-
-/* ✅ After: Combine selectors for text and email inputs */
-.shift-form-row .shift-input[type='text'],
-.shift-form-row .shift-input[type='email'] {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  width: 100%;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  color: #ffffff;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.shift-form-row .shift-input[type='text']:invalid,
-.shift-form-row .shift-input[type='email']:invalid {
-  border: 1px solid #ff3131; /* SHIFT accent red */
-  color: #ff3131;
-  box-shadow: none; /* remove browser default red glow */
+/* Textarea */
+textarea {
+  min-height: 200px;
+  resize: none;
 }
 
 
-/* radio selection */
-.shift-radio-row {
-  display: flex;
-  align-items: center;
+/* Radio Section */
+.legacy-form-row {
+  border: none;
+  margin-bottom: 25px;
+}
+.legacy-form-row legend {
+  color: #FFD700;
   margin-bottom: 10px;
+  font-weight: 600;
+}
+.radio-label {
+  display: inline-block;
+  margin-right: 20px;
+  color: #EDEDED;
+}
+input[type="radio"] {
+  margin-right: 5px;
 }
 
-/* Radio button */
-.shift-radio {
-  margin-right: 10px;
-  accent-color:#7c88f5; /* modern browsers support this */
-  cursor: pointer;
-}
- 
-
-/* Label */
-.shift-radio-label {
+/* Checkbox */
+.checkbox-label span {
+  color: #EDEDED;
   font-size: 14px;
-  color: #dbd4d4;
+}
+
+/* Submit Button */
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 40px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-row button:hover {
+  background-color: #FFC000;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.form-row button:active {
+  background-color: #E5B600;
 }
 
-
-/* drop down */
-.shift-form-row select {
-  width: 100%;
-  padding: 5px;
-  font-size: 14px;
-  --webkit-appearance: none; /* Ensure consistent look on Chrome & Safari */
-  background-color: #fff;
-  border: 1px solid #D6D9DC;
-  border-radius: 3px;
-}
-
-
-
-
-/* responsive layout */
+/* Responsive Layout */
 @media only screen and (min-width: 700px) {
-  .shift-speaker-header,
-  .shift-speaker-form {
+  .speaker-form-header, .speaker-form {
     width: 600px;
   }
-
-  .shift-form-row {
+  .form-row {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
   }
-
-  .shift-label {
-    width: 130px;
-    text-align: right;
-    margin-top: 10px;
-    padding-right: 20px;
-  }
-
-  .shift-input {
-    width: 100%;
-    max-width: 320px;
-  }
-
-
-  .shift-form-row .shift-input[type='text'],
-  .shift-form-row .shift-input[type='email'],
-  .shift-form-row select,
-  .shift-form-row textarea {
-    width: 320px;
-    height: auto;
-  }
-
-  /* radio selection */
-  .shift-form-group {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-
-  .shift-legend {
-    width: 150px;
+  .form-row label {
+    width: 120px;
     text-align: right;
     padding-right: 20px;
-    margin: 0;
   }
-
-  /* Group radios side by side */
-  .shift-radio-row {
-    margin-right: 20px;
-    margin-bottom: 0;
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 350px;
   }
-
+  .form-row button {
+    margin-left: 120px;
+  }
 }
-
-
